@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SearchTab extends StatelessWidget {
-  const SearchTab({super.key});
+class EvolutionTab extends StatelessWidget {
+  const EvolutionTab({super.key});
 
   @override
   Widget build(BuildContext context) {
