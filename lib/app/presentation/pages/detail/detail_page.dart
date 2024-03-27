@@ -24,7 +24,6 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
         backgroundColor: Colors.transparent,
       ),
       backgroundColor: bgColor,
