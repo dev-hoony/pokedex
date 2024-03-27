@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/app/presentation/pages/detail/detail_page.dart';
 
+import '../../../../domain/entity/pokemon.dart';
+
 class PokemonCard extends StatelessWidget {
-  const PokemonCard({super.key});
+  final Pokemon data;
+
+  const PokemonCard({
+    super.key,
+    required this.data,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +31,7 @@ class PokemonCard extends StatelessWidget {
               children: [
                 Container(
                   height: 180,
-                  child: Placeholder(),
+                  child: Image.network(data.imgUrl),
                 ),
                 Positioned(
                   left: 4,
@@ -32,12 +39,12 @@ class PokemonCard extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     color: Colors.black.withOpacity(0.4),
-                    child: Text('number'),
+                    child: Text(data.number.toString()),
                   ),
                 )
               ],
             ),
-            Text("pokemon name"),
+            Text(data.name),
           ],
         ),
       ),
